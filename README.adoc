@@ -1,9 +1,11 @@
 = Paneron website common components
 
-This library provides scaffolding functions & shared elements used by Paneron websites.
+This library exports:
 
-This library exports UI constants, some React components and scaffolding code
-related to react-static site initialization.
+- UI constants, some React components and global style rules
+  (to ensure consistent styling across Paneron presentational websites)
+- Functions encapsulating react-static site configuration and initialization logic
+  (to reduce boilerplate code among said websites)
 
 Websites using this library are assumed to be built with react-static and Emotion.
 

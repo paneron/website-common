@@ -11,6 +11,9 @@
   },
   "files": [
     "README.adoc",
+    "ui-constants.js",
+    "ui-constants.js.map",
+    "ui-constants.d.ts",
     "scaffolding/*.js",
     "scaffolding/*.js.map",
     "scaffolding/*.d.ts",

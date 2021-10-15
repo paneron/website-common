@@ -1,5 +1,10 @@
 = Paneron website common components
 
-This repository provides scaffolding functions & shared elements used by Paneron websites.
+This library provides scaffolding functions & shared elements used by Paneron websites.
 
-For an example of how to use this library, see paneron.extensions.org codebase.
+This library exports UI constants, some React components and scaffolding code
+related to react-static site initialization.
+
+Websites using this library are assumed to be built with react-static and Emotion.
+
+For an example, see paneron.extensions.org codebase.

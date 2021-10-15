@@ -7,4 +7,4 @@ related to react-static site initialization.
 
 Websites using this library are assumed to be built with react-static and Emotion.
 
-For an example, see [extensions.paneron.org codebase](https://github.com/paneron/extensions.paneron.org).
+For an example, see link:https://github.com/paneron/extensions.paneron.org[extensions.paneron.org codebase].

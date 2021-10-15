@@ -1,0 +1,59 @@
+{
+  "name": "@riboseinc/paneron-website-common",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": {
+    "name": "Ribose Inc.",
+    "email": "open@ribose.com"
+  },
+  "scripts": {
+    "build": "rm -r compiled dist; mkdir compiled dist; tsc --outDir compiled; babel compiled --out-dir dist; cp package.json compiled/*.d.ts compiled/*.js.map dist/"
+  },
+  "files": [
+    "README.adoc",
+    "scaffolding/*.js",
+    "scaffolding/*.js.map",
+    "scaffolding/*.d.ts",
+    "elements/*.js",
+    "elements/*.js.map",
+    "elements/*.d.ts"
+  ],
+  "peerDependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@reach/router": "^1.2.1",
+    "callsite": "^1.0.0",
+    "chroma-js": "^2.1.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-hot-loader": "^4.12.11",
+    "react-static-plugin-emotion": "^7.6.0",
+    "react-static-plugin-file-watch-reload": "^1.0.4",
+    "react-static-plugin-reach-router": "^7.6.0",
+    "react-static-plugin-sitemap": "^7.6.0",
+    "react-static-plugin-typescript": "^7.6.0",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@reach/router": "^1.2.1",
+    "@types/callsite": "^1.0.31",
+    "@types/chroma-js": "^2.0.0",
+    "@types/node": "^14.14.10",
+    "@types/reach__router": "^1.2",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-hot-loader": "^4.1.0",
+    "@types/webpack-env": "^1.14.0",
+    "callsite": "^1.0.0",
+    "chroma-js": "^2.1.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^6.1.0",
+    "react-static": "^7.5.3",
+    "typescript": "^4.1.3"
+  },
+  "license": "MIT"
+}

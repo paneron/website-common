@@ -6,7 +6,7 @@ import { Root, Routes } from 'react-static';
 import { Router } from '@reach/router';
 import { Helmet } from 'react-helmet';
 import globalStyle, { Spinner } from './GlobalStyle';
-import { TopBar, TopBarLink, TopBarInternalLinkSelected } from '../elements/top-bar';
+import { TopBar, TopBarLink, TopBarInternalLinkSelected, TopBarLinkSelected, TopBarInternalLink } from '../elements/top-bar';
 
 
 export interface AppOptions {
@@ -19,6 +19,7 @@ export interface AppOptions {
     external?: true;
 
     isHeader?: true;
+    selected?: true;
   }[];
 }
 
@@ -41,20 +42,36 @@ React.VoidFunctionComponent<Record<never, never>> {
             role={opts.topBarIsHeader ? 'heading' : undefined}
             aria-level={opts.topBarIsHeader ? 1 : undefined}>
           {opts.topLinks.map(topLink => topLink.external
-              ? <TopBarLink
-                  href={topLink.target}
-                  role={topLink.isHeader && !opts.topBarIsHeader ? 'heading' : undefined}
-                  aria-level={topLink.isHeader && !opts.topBarIsHeader ? 1 : undefined}
-                  title={topLink.title}>
-                {topLink.text}
-              </TopBarLink>
-            : <TopBarInternalLinkSelected
-                  to={topLink.target}
-                  role={topLink.isHeader && !opts.topBarIsHeader ? 'heading' : undefined}
-                  aria-level={topLink.isHeader && !opts.topBarIsHeader ? 1 : undefined}
-                  title={topLink.title}>
-                {topLink.text}
-              </TopBarInternalLinkSelected>
+            ? topLink.selected
+              ? <TopBarLinkSelected
+                    href={topLink.target}
+                    role={topLink.isHeader && !opts.topBarIsHeader ? 'heading' : undefined}
+                    aria-level={topLink.isHeader && !opts.topBarIsHeader ? 1 : undefined}
+                    title={topLink.title}>
+                  {topLink.text}
+                </TopBarLinkSelected>
+              : <TopBarLink
+                    href={topLink.target}
+                    role={topLink.isHeader && !opts.topBarIsHeader ? 'heading' : undefined}
+                    aria-level={topLink.isHeader && !opts.topBarIsHeader ? 1 : undefined}
+                    title={topLink.title}>
+                  {topLink.text}
+                </TopBarLink>
+            : topLink.selected
+              ? <TopBarInternalLinkSelected
+                    to={topLink.target}
+                    role={topLink.isHeader && !opts.topBarIsHeader ? 'heading' : undefined}
+                    aria-level={topLink.isHeader && !opts.topBarIsHeader ? 1 : undefined}
+                    title={topLink.title}>
+                  {topLink.text}
+                </TopBarInternalLinkSelected>
+              : <TopBarInternalLink
+                    to={topLink.target}
+                    role={topLink.isHeader && !opts.topBarIsHeader ? 'heading' : undefined}
+                    aria-level={topLink.isHeader && !opts.topBarIsHeader ? 1 : undefined}
+                    title={topLink.title}>
+                  {topLink.text}
+                </TopBarInternalLink>
           )}
         </TopBar>
 

@@ -1,0 +1,3 @@
+= Paneron website common components
+
+This repository provides scaffolding functions & shared elements used by Paneron websites.

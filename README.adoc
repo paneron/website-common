@@ -1,3 +1,5 @@
 = Paneron website common components
 
 This repository provides scaffolding functions & shared elements used by Paneron websites.
+
+For an example of how to use this library, see paneron.extensions.org codebase.

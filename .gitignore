@@ -1,0 +1,6 @@
+/artifacts
+/dist
+/compiled
+/node_modules
+yarn-error.log
+/tmp

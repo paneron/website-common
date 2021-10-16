@@ -5,7 +5,13 @@ import { jsx, css } from '@emotion/react'
 import styled from '@emotion/styled';
 import { Link } from '@reach/router';
 
-import { BIG_SCREEN_BREAKPOINT_PX, BORDER_RADIUS_REM, CARD_ICON_SIDE_REM } from '../ui-constants';
+import {
+  BIG_SCREEN_BREAKPOINT_PX,
+  BORDER_RADIUS_REM,
+  CARD_ICON_SIDE_REM,
+  CARD_SIDE_PADDING_FACTOR,
+} from '../ui-constants';
+
 import { Shaded } from './misc';
 
 
@@ -37,8 +43,6 @@ export const Card = styled(Shaded)`
   display: flex;
   flex-flow: column nowrap;
 `;
-
-const CARD_SIDE_PADDING_FACTOR = '1.4';
 
 export const CardHeader = styled.header`
   flex: 0;

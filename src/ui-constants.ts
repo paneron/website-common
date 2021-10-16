@@ -9,3 +9,5 @@ export const BIG_SCREEN_BREAKPOINT_PX = 800;
 
 export const CARD_ICON_SIDE_REM = 8.5;
 export const BORDER_RADIUS_REM = .75;
+
+export const CARD_SIDE_PADDING_FACTOR = '1.4';

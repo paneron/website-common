@@ -38,10 +38,12 @@ export const Card = styled(Shaded)`
   flex-flow: column nowrap;
 `;
 
+const CARD_SIDE_PADDING_FACTOR = '1.4';
+
 export const CardHeader = styled.header`
   flex: 0;
   padding-right: 1rem;
-  padding: 0 1rem;
+  padding: 0 ${CARD_SIDE_PADDING_FACTOR}rem;
   margin: 1rem 0;
 `;
 
@@ -49,7 +51,7 @@ export const CardBody: React.FC<{ allowWrap?: true; }> =
 function ({ allowWrap, children }) {
   return <main css={css`
     flex: 1;
-    padding: 0 1rem;
+    padding: 0 ${CARD_SIDE_PADDING_FACTOR}rem;
     ${allowWrap !== true
       ? `
           white-space: nowrap;
@@ -64,7 +66,7 @@ function ({ allowWrap, children }) {
 
 export const CardActions = styled.footer`
   flex: 0;
-  padding: 0 1rem;
+  padding: 0 ${CARD_SIDE_PADDING_FACTOR}rem;
   margin: 1rem 0 1rem 0;
   font-size: 80%;
 `;

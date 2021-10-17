@@ -28,8 +28,8 @@ export const CardStack = styled.div`
     justify-content: center;
 
     & > * {
-      margin: 0 0 .5rem .5rem;
       width: ${CARD_WIDTH_REM}rem;
+      margin: 0 .25rem .5rem .25rem;
     }
   }
 `;

@@ -10,6 +10,7 @@ import {
   BORDER_RADIUS_REM,
   CARD_ICON_SIDE_REM,
   CARD_SIDE_PADDING_FACTOR,
+  CARD_WIDTH_REM,
 } from '../ui-constants';
 
 import { Shaded } from './misc';
@@ -27,8 +28,8 @@ export const CardStack = styled.div`
     justify-content: center;
 
     & > * {
-      width: 20rem;
       margin: 0 0 .5rem .5rem;
+      width: ${CARD_WIDTH_REM}rem;
     }
   }
 `;
@@ -102,8 +103,8 @@ function ({ imgURL, wrapperClassName, className }) {
           height: ${CARD_ICON_SIDE_REM}rem; width: ${CARD_ICON_SIDE_REM}rem;
           display: block;
           position: relative;
-          top: -2.5rem;
-          right: -2.5rem;
+          top: -${CARD_ICON_SIDE_REM / 4}rem;
+          right: -${CARD_ICON_SIDE_REM / 4}rem;
           opacity: .4;
         `}
       />

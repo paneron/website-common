@@ -47,7 +47,6 @@ export const Card = styled(Shaded)`
 
 export const CardHeader = styled.header`
   flex: 0;
-  padding-right: 1rem;
   padding: 0 ${CARD_SIDE_PADDING_FACTOR}rem;
   margin: 1rem 0;
 `;

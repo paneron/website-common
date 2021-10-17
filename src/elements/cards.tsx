@@ -76,12 +76,18 @@ export const CardActions = styled.footer`
   font-size: 80%;
 `;
 
-export const CardActionLink = styled(Link)`
+const CARD_ACTION_LINK_STYLING = `
   color: #444;
   font-weight: 800;
   letter-spacing: .05rem;
   text-transform: uppercase;
-`;
+`
+export const CardActionLink = styled(Link)`
+  ${CARD_ACTION_LINK_STYLING}
+`
+export const CardActionLinkExternal = styled.a`
+  ${CARD_ACTION_LINK_STYLING}
+`
 
 export const CardBackgroundIcon: React.VoidFunctionComponent<{ imgURL: string; wrapperClassName?: string; className?: string; }> =
 function ({ imgURL, wrapperClassName, className }) {

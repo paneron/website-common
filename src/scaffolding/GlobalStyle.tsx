@@ -21,6 +21,7 @@ export default <Global styles={css`
 
     margin: 0;
     padding: 0;
+    padding-bottom: 2rem;
 
     min-height: 100vh;
     background-image: linear-gradient(157deg, ${colorScale(0.15).css()}, ${colorScale(0.5).css()});
